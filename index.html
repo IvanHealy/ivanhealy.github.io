@@ -153,7 +153,7 @@
 	var material = new THREE.MeshPhongMaterial( { color: 0xAAAAAA, specular: 0x111111, shininess: 200 } );
 
 	// Colored binary STL
-	loader.load( './hand.stl', function ( geometry ) {
+	loader.load( './trex.stl', function ( geometry ) {
 
 	var meshMaterial = material;
 	if (geometry.hasColors) {
@@ -174,16 +174,7 @@
 	} )
 ;
 	
-	var geometry	= new THREE.TorusKnotGeometry(0.3,0.1,64,16);
-	var material	= new THREE.MeshNormalMaterial(); 
-	var mesh	= new THREE.Mesh( geometry, material );
-	mesh.position.y	= 0.5
-	arWorldRoot.add( mesh );
 	
-	onRenderFcts.push(function(){
-		mesh.rotation.x += 0.1
-	})
-
 	//////////////////////////////////////////////////////////////////////////////////
 	//		render the whole thing on the page
 	//////////////////////////////////////////////////////////////////////////////////
